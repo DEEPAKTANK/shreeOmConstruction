@@ -1,8 +1,8 @@
 /* ==========================================================================
-   PRODUCTION CORE DESIGN ENVIRONMENT VARIABLE DEFINITIONS
+   AGENCY-LEVEL CSS DESIGN TOKENS & ARCHITECTURAL VARIABLES
    ========================================================================== */
 :root {
-    /* Color Palette Hex Mapping Specs */
+    /* Sophisticated High-Performance Hex Color Systems Modifiers */
     --primary: #0B1F3A;
     --primary-rgb: 11, 31, 58;
     --secondary: #FFFFFF;
@@ -16,17 +16,17 @@
     --success: #16A34A;
     --error: #EF4444;
     
-    /* Global Layout Metrics System Variables */
-    --container-max: 1320px;
+    /* Layout Framework Precision Metrics System Parameters scale */
+    --container-max: 1360px;
     --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-    --header-height: 85px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --header-height: 90px;
 }
 
 /* ==========================================================================
-   PERFORMANCE AND ENGINE STABILIZER SYSTEM RESET
+   HIGH PERFORMANCE LAYOUT STABILIZER FRAMEWORK RESET RULES
    ========================================================================== */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -46,133 +46,134 @@ body {
     color: var(--dark-text);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.7;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-/* Structural Semantic Typography Scale Constraints */
+/* Corporate Typographic Hierarchy and Spacing Bounds Scale */
 h1, h2, h3, h4 {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--primary);
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.015em;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); }
-h2 { font-size: clamp(1.85rem, 3.5vw, 2.5rem); }
-h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 600; }
-h4 { font-size: 1.2rem; font-weight: 600; }
+h1 { font-size: clamp(2.5rem, 5vw, 4.25rem); }
+h2 { font-size: clamp(2rem, 3.8vw, 2.75rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 600; }
+h4 { font-size: 1.25rem; font-weight: 600; }
 
-p { margin-bottom: 1.25rem; }
+p { margin-bottom: 1.5rem; color: var(--dark-text); }
 a { color: inherit; text-decoration: none; transition: var(--transition); }
 ul { list-style: none; }
 
 /* ==========================================================================
-   ACCESSIBILITY & SCREEN READERS SYSTEM ROUTINES
+   ACCESSIBILITY KEYBOARD & SCREEN READERS LAYOUT DIRECTIVES
    ========================================================================== */
 .skip-link {
     position: absolute;
-    top: -120px;
+    top: -140px;
     left: 20px;
     background: var(--accent);
     color: var(--primary);
-    padding: 0.85rem 1.75rem;
+    padding: 1rem 2rem;
     z-index: 99999;
     font-weight: 600;
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    box-shadow: 0 20px 25px -5px rgba(11, 31, 58, 0.1);
     transition: top 0.3s ease;
 }
 .skip-link:focus { top: 0; outline: none; }
 
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
     outline: 3px solid var(--accent);
-    outline-offset: 3px;
+    outline-offset: 4px;
+}
+
+/* Scroll Progress Ticker Tracking Framework Ribbon CSS */
+.scroll-progress-indicator {
+    position: fixed; top: 0; left: 0; width: 0; height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 100%);
+    z-index: 99999; transition: width 0.1s linear; will-change: width;
 }
 
 /* ==========================================================================
-   RESPONSIVE UTILITIES CONTAINER GRID MATRIX
+   RESPONSIVE UTILITY CONTAINERS LAYOUT MATRIX CONFIGURATIONS
    ========================================================================== */
 .container {
-    width: 100%;
-    max-width: var(--container-max);
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: clamp(1rem, 4vw, 2rem);
-    padding-left: clamp(1rem, 4vw, 2rem);
+    width: 100%; max-width: var(--container-max);
+    margin-right: auto; margin-left: auto;
+    padding-right: clamp(1rem, 5vw, 2.5rem); padding-left: clamp(1rem, 5vw, 2.5rem);
 }
 
-.grid { display: grid; gap: clamp(1.25rem, 2.5vw, 2.25rem); }
+.grid { display: grid; gap: clamp(1.5rem, 3vw, 2.5rem); }
 .grid-1 { grid-template-columns: 1fr; }
 .grid-2 { grid-template-columns: 1fr; }
 .grid-3 { grid-template-columns: 1fr; }
 .grid-4 { grid-template-columns: 1fr; }
 
-.section-padding { padding: clamp(3.5rem, 7vw, 7rem) 0; }
+.section-padding { padding: clamp(4.5rem, 9vw, 9rem) 0; }
 .light-bg { background-color: var(--background-light); }
 .text-center { text-align: center; }
 .border-bottom { border-bottom: 1px solid var(--support); }
 
-.section-header { max-width: 720px; margin: 0 auto clamp(2.5rem, 5vw, 4.5rem) auto; }
-.section-title { position: relative; padding-bottom: 1rem; margin-bottom: 1.25rem; }
+.section-header { max-width: 760px; margin: 0 auto clamp(3rem, 6vw, 5.5rem) auto; }
+.section-title { position: relative; padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
 .section-title::after {
     content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-    width: 55px; height: 4px; background-color: var(--accent); border-radius: 2px;
+    width: 65px; height: 4px; background-color: var(--accent); border-radius: 2px;
 }
 
-.section-lead { font-size: clamp(1rem, 1.8vw, 1.15rem); color: var(--text-muted); font-weight: 400; }
+.section-lead { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); font-weight: 400; }
 
-.mt-xs { margin-top: 0.4rem; }
-.mt-sm { margin-top: 0.85rem; }
-.mt-md { margin-top: 1.75rem; }
-.mt-xl { margin-top: 3.5rem; }
-.mb-sm { margin-bottom: 0.85rem; }
-.mb-md { margin-bottom: 1.75rem; }
-.pb-sm { padding-bottom: 0.85rem; }
+.mt-xs { margin-top: 0.5rem; }
+.mt-sm { margin-top: 1rem; }
+.mt-md { margin-top: 2rem; }
+.mt-xl { margin-top: 4rem; }
+.mb-sm { margin-bottom: 1rem; }
+.mb-md { margin-bottom: 2rem; }
+.pb-sm { padding-bottom: 1rem; }
 .accent-text { color: var(--accent) !important; }
 
 /* ==========================================================================
-   PRODUCTION SITE HEADER STICKY ENGINE CONTROLS
+   PRODUCTION SITE HEADER NAVBAR DESIGN PROPERTIES SYSTEM
    ========================================================================== */
 .site-header {
-    background-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: fixed; top: 0; left: 0; width: 100%; height: var(--header-height);
-    z-index: 1000; transition: var(--transition);
-    will-change: height, background-color;
+    z-index: 1000; transition: var(--transition); will-change: height, background-color;
 }
 
 .site-header.is-sticky {
-    height: 72px;
-    background-color: rgba(11, 31, 58, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px -10px rgba(11, 31, 58, 0.15);
+    height: 75px; background-color: rgba(11, 31, 58, 0.98);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 15px 35px -10px rgba(11, 31, 58, 0.2);
 }
 
 .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-.company-name { font-size: 1.35rem; font-weight: 700; color: var(--secondary); letter-spacing: -0.01em; }
+.company-name { font-size: 1.45rem; font-weight: 700; color: var(--secondary); letter-spacing: -0.01em; }
 .logo-placeholder {
-    width: 42px; height: 42px;
+    width: 44px; height: 44px;
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-    color: var(--primary); font-weight: 700; border-radius: 8px;
+    color: var(--primary); font-weight: 700; border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
 }
 
-.nav-link { font-size: 0.92rem; font-weight: 500; color: rgba(255, 255, 255, 0.85); position: relative; padding: 0.4rem 0; }
+.nav-link { font-size: 0.95rem; font-weight: 500; color: rgba(255, 255, 255, 0.85); position: relative; padding: 0.5rem 0; }
 .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--accent); transition: var(--transition); }
 .nav-link:hover::after, .nav-link:focus::after, .nav-link.active::after { width: 100%; }
 .nav-link:hover, .nav-link.active { color: var(--secondary); }
 
-/* Responsive Drawer Navigation Controls Styling */
+/* Mobile Menu Button Trigger Styling */
 .mobile-nav-toggle {
-    background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px; padding: 0.65rem; cursor: pointer; display: block; z-index: 1001;
+    background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px; padding: 0.75rem; cursor: pointer; display: block; z-index: 1001;
 }
 .mobile-nav-toggle .hamburger, .mobile-nav-toggle .hamburger::before, .mobile-nav-toggle .hamburger::after {
-    display: block; width: 22px; height: 2px; background-color: var(--secondary); position: relative; transition: var(--transition);
+    display: block; width: 24px; height: 2px; background-color: var(--secondary); position: relative; transition: var(--transition);
 }
 .mobile-nav-toggle .hamburger::before { content: ''; position: absolute; top: -6px; left: 0; }
 .mobile-nav-toggle .hamburger::after { content: ''; position: absolute; top: 6px; left: 0; }
@@ -183,229 +184,249 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .primary-nav {
     position: fixed; top: 0; left: 100%; width: 100%; height: 100vh;
-    background-color: var(--primary); padding: calc(var(--header-height) + 2rem) var(--gap-lg) var(--gap-lg) var(--gap-lg);
+    background-color: var(--primary); padding: calc(var(--header-height) + 3rem) var(--gap-lg) var(--gap-lg) var(--gap-lg);
     transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1); overflow-y: auto; z-index: 999;
 }
 .primary-nav.is-active { left: 0; }
-.nav-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.nav-list { display: flex; flex-direction: column; gap: 1.75rem; }
 
 /* ==========================================================================
-   PREMIUM COMPONENT STYLES SYSTEM (RIPPLES & SPIN ANIMATIONS EXTRACTED)
+   AGENCY-LEVEL PREMIUM BUTTON INFRASTRUCTURE
    ========================================================================== */
 .btn {
     position: relative; display: inline-flex; align-items: center; justify-content: center;
-    font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: var(--radius-md);
+    font-weight: 600; font-size: 0.95rem; padding: 1rem 2.25rem; border-radius: var(--radius-md);
     border: 2px solid transparent; cursor: pointer; overflow: hidden; z-index: 1; transition: var(--transition);
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(11, 31, 58, 0.2); }
-.btn:active { transform: translateY(0); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -10px rgba(11, 31, 58, 0.25); }
+.btn:active { transform: translateY(-1px); }
 
 .btn-primary { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); color: var(--primary); }
-.btn-secondary { background: transparent; border-color: rgba(255, 255, 255, 0.25); color: var(--secondary); }
-.btn-secondary:hover { border-color: var(--secondary); background: rgba(255, 255, 255, 0.04); }
-.btn-nav { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); color: var(--primary) !important; padding: 0.5rem 1.15rem; font-size: 0.85rem; }
+.btn-secondary { background: transparent; border-color: rgba(255, 255, 255, 0.3); color: var(--secondary); backdrop-filter: blur(4px); }
+.btn-secondary:hover { border-color: var(--secondary); background: rgba(255, 255, 255, 0.05); }
+.btn-nav { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); color: var(--primary) !important; padding: 0.6rem 1.35rem; font-size: 0.88rem; }
 
 /* ==========================================================================
-   STUNNING INTRO HERO DESIGN
+   HIGH-COMPOSITION HERO COMPONENT CAPABILITIES
    ========================================================================== */
 .section-hero {
     position: relative;
-    background: linear-gradient(rgba(11, 31, 58, 0.85), rgba(11, 31, 58, 0.9)), 
+    background: linear-gradient(rgba(11, 31, 58, 0.82), rgba(11, 31, 58, 0.88)), 
                 url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') center center / cover no-repeat;
-    min-height: 100vh; padding-top: calc(var(--header-height) + var(--gap-md)); display: flex; align-items: center;
+    min-height: 100vh; padding-top: calc(var(--header-height) + var(--gap-lg)); display: flex; flex-direction: column; justify-content: center;
 }
-.hero-content { max-width: 750px; }
-.hero-title { color: var(--secondary); line-height: 1.15; margin-bottom: 1.5rem; }
-.hero-subtitle { color: var(--background-light); font-size: clamp(1.1rem, 2.2vw, 1.35rem); margin-bottom: 2.5rem; opacity: 0.95; font-weight: 400; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.hero-content { max-width: 800px; padding-bottom: 3.5rem; }
+.hero-title { color: var(--secondary); line-height: 1.15; margin-bottom: 1.75rem; }
+.hero-subtitle { color: var(--background-light); font-size: clamp(1.15rem, 2.4vw, 1.45rem); margin-bottom: 2.75rem; opacity: 0.95; font-weight: 400; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+
+/* Trust Badges Integration Grid inside Hero Boundaries Overlay */
+.hero-trust-badges-grid {
+    display: grid; gap: 1.5rem; grid-template-columns: 1fr;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2.5rem; width: 100%;
+}
+.trust-badge-item { display: flex; align-items: center; gap: 1rem; color: var(--secondary); }
+.trust-badge-item .badge-icon { font-size: 1.75rem; display: inline-flex; }
+.trust-badge-item .badge-text { display: flex; flex-direction: column; }
+.trust-badge-item .badge-text strong { font-size: 1.05rem; font-family: 'Poppins', sans-serif; color: var(--accent); }
+.trust-badge-item .badge-text .sub-lbl { font-size: 0.8rem; color: rgba(255, 255, 255, 0.7); }
 
 /* ==========================================================================
-   CARDS COMPONENT SYSTEM ENVELOPE MODIFIERS
+   CARDS COMPONENT SYSTEM LAYOUT SYSTEM ENVELOPES
    ========================================================================== */
 .card {
     background-color: var(--secondary); border: 1px solid rgba(229, 231, 235, 0.8);
     border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: var(--transition);
     position: relative; overflow: hidden; display: flex; flex-direction: column;
-    will-change: transform, box-shadow;
+    will-change: transform, box-shadow; transform: translateZ(0);
 }
-.card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -10px rgba(11, 31, 58, 0.1); }
-.card-body { padding: 2rem; flex: 1 1 auto; }
-.card-title { font-size: 1.2rem; margin-bottom: 0.5rem; }
-.card-text { font-size: 0.92rem; color: var(--dark-text); }
+.card:hover { transform: translateY(-8px); box-shadow: 0 25px 45px -15px rgba(11, 31, 58, 0.12); }
+.card-body { padding: 2.5rem; flex: 1 1 auto; }
+.card-title { font-size: 1.25rem; margin-bottom: 0.6rem; }
+.card-text { font-size: 0.95rem; color: var(--dark-text); }
 
-.card-service { text-align: left; padding: 2rem; }
+.card-service { text-align: left; padding: 2.5rem; }
 .card-icon {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 60px; height: 60px; background-color: rgba(11, 31, 58, 0.04);
-    border-radius: var(--radius-md); font-size: 1.75rem; margin-bottom: 1.5rem; transition: var(--transition);
+    width: 65px; height: 65px; background-color: rgba(11, 31, 58, 0.04);
+    border-radius: var(--radius-md); font-size: 2rem; margin-bottom: 1.75rem; transition: var(--transition);
 }
 .card-service:hover .card-icon { background-color: var(--primary); transform: scale(1.05); }
 
-/* Portfolio Specifications Cards Framework */
+/* Premium Real Estate Portfolio Cards System Elements */
 .card-project .project-img-placeholder {
-    height: 240px; background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
+    height: 250px; background: linear-gradient(135deg, var(--primary) 0%, #2D3748 100%);
     position: relative; display: flex; align-items: center; justify-content: center;
-    color: rgba(255, 255, 255, 0.15); font-weight: bold; font-size: 0.85rem; padding: 1rem; text-align: center;
+    color: rgba(255, 255, 255, 0.12); font-weight: bold; font-size: 0.9rem; padding: 1rem; text-align: center;
 }
-.project-spec-list { padding: 0.75rem 0 0 0; display: flex; flex-direction: column; gap: 0.35rem; list-style: none; }
-.project-spec-list li { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(229, 231, 235, 0.7); padding-bottom: 0.25rem; }
+.project-spec-list { padding: 1rem 0 0 0; display: flex; flex-direction: column; gap: 0.45rem; list-style: none; }
+.project-spec-list li { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(229, 231, 235, 0.8); padding-bottom: 0.3rem; }
 
 .tag {
-    position: absolute; top: 1rem; right: 1rem; z-index: 2; font-size: 0.72rem;
-    font-weight: 600; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px; text-transform: uppercase;
+    position: absolute; top: 1.25rem; right: 1.25rem; z-index: 2; font-size: 0.75rem;
+    font-weight: 600; letter-spacing: 0.05em; padding: 0.4rem 1rem; border-radius: 25px; text-transform: uppercase;
 }
-.tag-accent { background-color: rgba(255, 255, 255, 0.95); color: var(--primary); border: 1px solid var(--accent); }
+.tag-accent { background-color: rgba(255, 255, 255, 0.98); color: var(--primary); border: 1px solid var(--accent); }
 
 /* ==========================================================================
-   OPERATIONAL CRITICAL PATH PIPELINE (TIMELINE LAYOUT)
+   CRITICAL PATH METRIC PIPELINES (TIMELINE LAYER MODIFIERS)
    ========================================================================== */
-.timeline { position: relative; display: flex; flex-direction: column; gap: 1.75rem; }
+.timeline { position: relative; display: flex; flex-direction: column; gap: 2rem; }
 .timeline-item { width: 100%; position: relative; }
-.timeline-content { background: var(--secondary); border: 1px solid var(--support); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); }
-.timeline-title { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.timeline-content { background: var(--secondary); border: 1px solid var(--support); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-sm); }
+.timeline-title { font-size: 1.2rem; margin-bottom: 0.6rem; }
 .timeline-marker {
-    position: absolute; top: -12px; left: 20px; width: 30px; height: 30px;
+    position: absolute; top: -14px; left: 25px; width: 34px; height: 34px;
     border-radius: 50%; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-    color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; z-index: 2;
+    color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; z-index: 2;
 }
 
 /* ==========================================================================
-   STATISTICAL HUB GRAPHIC INTERFACE (GLASSMORPHISM STYLE)
+   GLASSMORPHISM DATA GRAPH HIGHLIGHT BOARDS
    ========================================================================== */
 .stats-bg {
-    background: linear-gradient(rgba(11, 31, 58, 0.92), rgba(11, 31, 58, 0.96)), 
+    background: linear-gradient(rgba(11, 31, 58, 0.93), rgba(11, 31, 58, 0.96)), 
                 url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070') center center / cover no-repeat;
-    border-top: 3px solid var(--accent); border-bottom: 3px solid var(--accent);
+    border-top: 4px solid var(--accent); border-bottom: 4px solid var(--accent);
 }
 .stat-item {
-    background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: var(--radius-lg); padding: 2.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: var(--radius-lg); padding: 3rem 2rem;
 }
-.stat-number { font-size: clamp(2.25rem, 4vw, 3.25rem); color: var(--accent); font-weight: 700; margin-bottom: 0.35rem; line-height: 1; }
-.stat-label { color: var(--secondary); font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-number { font-size: clamp(2.5rem, 4.5vw, 3.5rem); color: var(--accent); font-weight: 700; margin-bottom: 0.4rem; line-height: 1; letter-spacing: -0.02em; }
+.stat-label { color: var(--secondary); font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.06em; }
 
 /* ==========================================================================
-   LUXURY QUOTATION CAROUSEL MODULES
+   LUXURY USER SLIDER REFERENCES BOARDS
    ========================================================================== */
-.testimonial-card { background-color: var(--secondary); border-top: 4px solid var(--accent) !important; padding: 2rem; }
-.testimonial-quote { font-size: 0.98rem; color: var(--dark-text); position: relative; margin-bottom: 1.5rem; font-style: italic; }
-.testimonial-quote::before { content: '“'; font-size: 3.5rem; color: rgba(214, 175, 55, 0.15); position: absolute; top: -20px; left: -10px; line-height: 1; }
-.testimonial-author strong { display: block; font-size: 1.05rem; color: var(--primary); }
-.testimonial-title { font-size: 0.82rem; color: var(--text-muted); display: block; margin-top: 0.2rem; text-transform: uppercase; }
-.testimonial-card::after { content: '★★★★★'; letter-spacing: 2px; color: var(--accent); display: block; margin-bottom: 1rem; font-size: 1rem; }
+.testimonial-card { background-color: var(--secondary); border-top: 4px solid var(--accent) !important; padding: 2.5rem; }
+.testimonial-quote { font-size: 1.02rem; color: var(--dark-text); position: relative; margin-bottom: 1.75rem; font-style: italic; line-height: 1.75; }
+.testimonial-quote::before { content: '“'; font-size: 4rem; color: rgba(214, 175, 55, 0.15); position: absolute; top: -25px; left: -12px; line-height: 1; }
+.testimonial-author strong { display: block; font-size: 1.1rem; color: var(--primary); }
+.testimonial-title { font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.testimonial-card::after { content: '★★★★★'; letter-spacing: 2.5px; color: var(--accent); display: block; margin-bottom: 1.25rem; font-size: 1.05rem; }
 
 /* ==========================================================================
-   HIGH PERFORMANCE BUSINESS ESTIMATION TRANSACTION LAYOUT
+   PRODUCTION ENGINE SECURE FORMS CORE STYLING
    ========================================================================== */
-.form-narrow { max-width: 720px; margin: 0 auto; }
-.form-layout { padding: clamp(1.5rem, 4vw, 3rem) !important; box-shadow: 0 20px 40px -15px rgba(11, 31, 58, 0.08); }
-.form-group { position: relative; margin-bottom: 1.75rem; }
-.form-label { display: block; font-weight: 600; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+.form-narrow { max-width: 760px; margin: 0 auto; }
+.form-layout { padding: clamp(2rem, 5vw, 3.5rem) !important; box-shadow: 0 25px 50px -20px rgba(11, 31, 58, 0.1); }
+.form-group { position: relative; margin-bottom: 2rem; }
+.form-label { display: block; font-weight: 600; color: var(--primary); text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
 .form-control {
     display: block; width: 100%; background-color: var(--background); border: 2px solid var(--support);
-    border-radius: var(--radius-md); padding: 0.85rem 1.15rem; color: var(--primary); font-weight: 500; transition: var(--transition);
+    border-radius: var(--radius-md); padding: 0.95rem 1.25rem; color: var(--primary); font-weight: 500; transition: var(--transition);
 }
-.form-control:focus { background-color: var(--secondary); border-color: var(--primary); box-shadow: 0 0 0 4px rgba(11, 31, 58, 0.04); outline: none; }
-textarea.form-control { min-height: 140px; resize: vertical; }
-.required { color: var(--error); margin-left: 0.2rem; }
+.form-control:focus { background-color: var(--secondary); border-color: var(--primary); box-shadow: 0 0 0 5px rgba(11, 31, 58, 0.04); outline: none; }
+textarea.form-control { min-height: 160px; resize: vertical; }
+.required { color: var(--error); margin-left: 0.25rem; }
 
-/* Anti-Spam Security Token Layer Mapping */
-.security-honeypot-layer { display: none !important; visibility: hidden !important; }
+/* Antispam Security Field Matrix Anchor Layer Map */
+.security-honeypot-layer { display: none !important; visibility: hidden !important; opacity: 0 !important; }
 
 /* ==========================================================================
-   MAP VISUAL INTEGRATION LAYER PROPERTIES
+   GEOLOCATION OFFICE MAP WRAPPERS
    ========================================================================== */
 .section-map { position: relative; width: 100%; }
-.map-container-placeholder { height: 460px; position: relative; overflow: hidden; }
+.map-container-placeholder { height: 500px; position: relative; overflow: hidden; }
 .map-overlay-card {
-    position: absolute; top: 25px; left: 25px; z-index: 10; background: rgba(11, 31, 58, 0.96);
-    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--secondary); padding: 2rem; border-radius: var(--radius-lg); max-width: 340px; box-shadow: var(--shadow-lg);
+    position: absolute; top: 30px; left: 30px; z-index: 10; background: rgba(11, 31, 58, 0.97);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--secondary); padding: 2.5rem; border-radius: var(--radius-lg); max-width: 360px; box-shadow: var(--shadow-lg);
 }
-.map-overlay-card h4 { color: var(--accent); margin-bottom: 0.5rem; }
-.map-overlay-card p { color: var(--background-light); margin-bottom: 1rem; }
-.embed-map-frame-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #d1d5db; }
+.map-overlay-card h4 { color: var(--accent); margin-bottom: 0.6rem; }
+.map-overlay-card p { color: var(--background-light); margin-bottom: 1.25rem; }
+.embed-map-frame-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #cbd5e1; }
 
 /* ==========================================================================
-   DEEP CORPORATE FOOTER PANEL STYLES
+   ELITE HIGH-END FOOTER PLATFORM MATRIX PROPERTIES
    ========================================================================== */
-.site-footer { background-color: var(--primary); border-top: 4px solid var(--accent); color: #9CA3AF; padding: 4rem 0 1.5rem 0; }
-.footer-title { color: var(--secondary); font-size: 1.05rem; padding-bottom: 0.6rem; margin-bottom: 1.5rem; position: relative; font-weight: 600; }
-.footer-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background-color: var(--accent); }
-.footer-brand-col .company-name { font-size: 1.45rem; display: inline-block; margin-bottom: 0.75rem; }
-.footer-links li { margin-bottom: 0.75rem; }
-.footer-links a { color: #9CA3AF; font-size: 0.9rem; display: block; }
-.footer-links a:hover { color: var(--accent); padding-left: 4px; }
+.site-footer { background-color: var(--primary); border-top: 4px solid var(--accent); color: #9CA3AF; padding: 4.5rem 0 2rem 0; }
+.footer-title { color: var(--secondary); font-size: 1.1rem; padding-bottom: 0.75rem; margin-bottom: 1.75rem; position: relative; font-weight: 600; }
+.footer-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 35px; height: 2px; background-color: var(--accent); }
+.footer-brand-col .company-name { font-size: 1.55rem; display: inline-block; margin-bottom: 0.85rem; }
+.footer-links li { margin-bottom: 0.85rem; }
+.footer-links a { color: #9CA3AF; font-size: 0.95rem; display: block; }
+.footer-links a:hover { color: var(--accent); padding-left: 5px; }
 .social-icon-link {
-    width: 38px; height: 38px; background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 0.8rem; color: var(--secondary);
+    width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 0.85rem; color: var(--secondary);
 }
-.social-icon-link:hover { background-color: var(--accent); color: var(--primary); transform: translateY(-2px); }
-.footer-copyright-bar { border-top: 1px solid rgba(255, 255, 255, 0.06) !important; padding-top: 1.5rem; }
+.social-icon-link:hover { background-color: var(--accent); color: var(--primary); transform: translateY(-3px); box-shadow: 0 10px 15px -5px rgba(214, 175, 55, 0.4); }
+.footer-copyright-bar { border-top: 1px solid rgba(255, 255, 255, 0.05) !important; padding-top: 2rem; }
 
 /* ==========================================================================
-   PRODUCTION ENGINE SYSTEM INJECTIONS STYLES (LOADERS, RIPPLES & COMM NODES)
+   HIGH ACCELERATION RUNTIME RUNTIME OVERLAY LAYER MECHANICS
    ========================================================================== */
-.site-preloader { position: fixed; inset: 0; background-color: var(--primary); z-index: 99999; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s ease, visibility 0.4s; }
+.site-preloader { position: fixed; inset: 0; background-color: var(--primary); z-index: 99999; display: flex; align-items: center; justify-content: center; transition: opacity 0.45s ease, visibility 0.45s; }
 .site-preloader.fade-out { opacity: 0; visibility: hidden; }
-.preloader-spinner { width: 45px; height: 45px; border: 3px solid rgba(255, 255, 255, 0.08); border-top: 3px solid var(--accent); border-radius: 50%; animation: spinLoader 0.8s linear infinite; }
-@keyframes spinLoader { 100% { transform: rotate(360deg); } }
+.preloader-spinner { width: 50px; height: 50px; border: 3px solid rgba(255, 255, 255, 0.08); border-top: 3px solid var(--accent); border-radius: 50%; animation: spinSystemLoader 0.75s linear infinite; }
+@keyframes spinSystemLoader { 100% { transform: rotate(360deg); } }
 
-.reveal-hidden { opacity: 0; transform: translateY(20px); transition: opacity 0.65s cubic-bezier(0.25, 1, 0.5, 1), transform 0.65s cubic-bezier(0.25, 1, 0.5, 1); will-change: opacity, transform; }
+.reveal-hidden { opacity: 0; transform: translateY(25px); transition: opacity 0.75s cubic-bezier(0.25, 1, 0.5, 1), transform 0.75s cubic-bezier(0.25, 1, 0.5, 1); will-change: opacity, transform; }
 .reveal-visible { opacity: 1; transform: translateY(0); }
 
-.project-progress-container { width: 100%; background: var(--support); height: 5px; border-radius: 3px; margin: 0.85rem 0; overflow: hidden; position: relative; }
-.project-progress-bar { height: 100%; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 100%); width: 0; transition: width 1.2s ease-in-out; }
+.project-progress-container { width: 100%; background: var(--support); height: 6px; border-radius: 3px; margin: 1rem 0; overflow: hidden; position: relative; }
+.project-progress-bar { height: 100%; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 100%); width: 0; transition: width 1.4s cubic-bezier(0.25, 1, 0.5, 1); }
 
 .ripple-surface { position: relative; overflow: hidden; }
-.btn-ripple { position: absolute; background: rgba(255, 255, 255, 0.25); border-radius: 50%; transform: scale(0); animation: ripple 0.55s linear; pointer-events: none; }
-@keyframes ripple { to { transform: scale(4); opacity: 0; } }
+.btn-ripple { position: absolute; background: rgba(255, 255, 255, 0.28); border-radius: 50%; transform: scale(0); animation: buttonClickRipple 0.55s linear; pointer-events: none; }
+@keyframes buttonClickRipple { to { transform: scale(4); opacity: 0; } }
 
 .btn-loading-text.is-hidden { visibility: hidden; opacity: 0; }
-.btn-spinner { position: absolute; width: 18px; height: 18px; border: 2px solid transparent; border-top: 2px solid currentColor; border-radius: 50%; animation: spinLoader 0.7s linear infinite; }
-.field-error-message { color: var(--error); font-size: 0.76rem; font-weight: 500; margin-top: 0.35rem; display: block; min-height: 1.1rem; }
+.btn-spinner { position: absolute; width: 20px; height: 20px; border: 2px solid transparent; border-top: 2px solid currentColor; border-radius: 50%; animation: spinSystemLoader 0.7s linear infinite; }
+.field-error-message { color: var(--error); font-size: 0.78rem; font-weight: 500; margin-top: 0.4rem; display: block; min-height: 1.15rem; }
 
-.floating-actions-wrapper { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 0.65rem; z-index: 999; }
-.floating-action-btn { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 10px 25px -5px rgba(11, 31, 58, 0.2); transition: var(--transition); font-size: 1.15rem; cursor: pointer; border: none; }
-.floating-action-btn:hover { transform: translateY(-3px) scale(1.04); }
+.floating-actions-wrapper { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 0.75rem; z-index: 999; }
+.floating-action-btn { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 12px 30px -5px rgba(11, 31, 58, 0.25); transition: var(--transition); font-size: 1.2rem; cursor: pointer; border: none; }
+.floating-action-btn:hover { transform: translateY(-4px) scale(1.05); }
 .float-wa { background-color: #25D366; }
 .float-phone { background-color: #0284c7; }
-.float-top { background-color: var(--primary); border: 1px solid rgba(255,255,255,0.08); opacity: 0; visibility: hidden; transform: translateY(5px); }
+.float-top { background-color: var(--primary); border: 1px solid rgba(255,255,255,0.08); opacity: 0; visibility: hidden; transform: translateY(8px); }
 .float-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
-.btn:disabled { opacity: 0.65; cursor: not-allowed; filter: grayscale(0.8); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(0.9); }
 
 /* ==========================================================================
-   HIGH PERFORMANCE LAYOUT ADAPTABILITY MEDIA BREAKPOINTS
+   MEDIA QUERY ARCHITECTURE FOR HIGH FIDELITY MULTI BREAKPOINTS
    ========================================================================== */
 @media (min-width: 640px) {
     .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .hero-trust-badges-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 992px) {
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .mobile-nav-toggle { display: none; }
-    .primary-nav { position: static; width: auto; height: auto; background-color: transparent; backdrop-filter: none; padding: 0; box-shadow: none; overflow-y: visible; }
-    .nav-list { flex-direction: row; align-items: center; gap: clamp(1rem, 2vw, 2.25rem); }
-    .nav-link { color: rgba(255, 255, 255, 0.85); font-size: 0.9rem; }
+    .hero-trust-badges-grid { grid-template-columns: repeat(4, 1fr); }
     
-    /* Horizontal Critical Path Timeline Layout Adaptation Override */
-    .timeline { flex-direction: row; gap: 0; padding: 2.5rem 0; }
+    .mobile-nav-toggle { display: none; }
+    
+    .primary-nav { position: static; width: auto; height: auto; background-color: transparent; backdrop-filter: none; padding: 0; box-shadow: none; overflow-y: visible; }
+    .nav-list { flex-direction: row; align-items: center; gap: clamp(1.25rem, 2.5vw, 2.5rem); }
+    .nav-link { color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; }
+    
+    /* Horizontal Blueprint Process Path Alignment overrides */
+    .timeline { flex-direction: row; gap: 0; padding: 3rem 0; }
     .timeline-item { flex: 1; }
-    .timeline-item::after { content: ''; position: absolute; top: 2px; left: 35px; width: calc(100% - 35px); height: 2px; background-color: var(--support); z-index: 1; }
+    .timeline-item::after { content: ''; position: absolute; top: 2px; left: 40px; width: calc(100% - 40px); height: 2px; background-color: var(--support); z-index: 1; }
     .timeline-item:last-child::after { display: none; }
-    .timeline-content { margin-top: 2rem; margin-right: 1rem; }
-    .timeline-marker { top: -14px; left: 8px; z-index: 2; }
+    .timeline-content { margin-top: 2.5rem; margin-right: 1.25rem; }
+    .timeline-marker { top: -15px; left: 10px; z-index: 2; }
 }
 
 @media (min-width: 1200px) {
     .grid-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* Print Specific Environmental Style Rules Extensions (WCAG AA Compliant) */
+@media (max-width: 640px) {
+    .flex-column-mobile { flex-direction: column; }
+    .mt-xs-mobile { margin-top: 0.75rem; }
+}
+
+/* Print Landscape Layout Formatting Specifications Matrix Rules */
 @media print {
-    .site-header, .floating-actions-wrapper, .mobile-nav-toggle, button, .placeholder-gallery-trigger { display: none !important; }
+    .site-header, .floating-actions-wrapper, .mobile-nav-toggle, button, .placeholder-gallery-trigger, .scroll-progress-indicator { display: none !important; }
     body { background: white; color: black; font-size: 12pt; }
     .container { max-width: 100%; padding: 0; margin: 0; }
-    .card, .timeline-content { box-shadow: none !important; border: 1px solid #999 !important; page-break-inside: avoid; }
-    .section-padding { padding: 2rem 0; }
+    .card, .timeline-content { box-shadow: none !important; border: 1px solid #777 !important; page-break-inside: avoid; }
+    .section-padding { padding: 2.5rem 0; }
 }
