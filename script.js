@@ -1,529 +1,579 @@
 /**
- * Shree Om Construction and Planning - Premium Interactions & Engine Controller
- * Phase 3 Execution Model - Vanilla JS Functional Architecture
+ * Shree Om Construction and Planning - Unified Production Engine Controller
+ * Phase 4 Final Compilation Model - Highly Optimized Vanilla JS Architecture
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Global System Configuration Engine
-    const UIConfig = {
-        headerHeight: 75,
-        sliderInterval: 5000,
-        revealOffset: 0.15
+(() => {
+    'use strict';
+
+    // Corporate Central Engine Configuration Settings Object
+    const GlobalEngineConfig = {
+        headerHeightThreshold: 72,
+        sliderRotationInterval: 5000,
+        revealBoundaryThreshold: 0.1,
+        maxCounterDurationMs: 1800
     };
 
+    const DomCache = {};
+
     /**
-     * System Bootloader Orchestrator
+     * Centralized Initialization Pipeline Orchestrator
      */
-    const AppController = {
+    const AppMasterController = {
         init() {
-            this.injectDynamicHTMLElements();
-            this.cacheElements();
-            this.initPreloaderEngine();
-            this.initNavigationSystem();
-            this.initScrollRevealFramework();
-            this.initAnimatedCounters();
-            this.initProjectCardsEnhancements();
-            this.initTestimonialSlider();
-            this.initFormValidationPipeline();
-            this.initInteractiveRipples();
+            this.injectProductionSystemOverlays();
+            this.cacheStructuralSelectors();
+            this.executePreloaderSequence();
+            this.bindCoreNavigationPipelines();
+            this.initializeScrollRevealObserver();
+            this.initializePerformanceCounters();
+            this.renderDynamicProjectMetrics();
+            this.initializeReferencesCarousel();
+            this.registerAcquisitionValidationPipeline();
+            this.deployInteractiveRipples();
         },
 
         /**
-         * Injects lightweight access nodes matching layout spec demands
+         * Safely injects access nodes directly into spatial context at operational startup
          */
-        injectDynamicHTMLElements() {
-            // Preloader Shield Layer Configuration
-            const preloaderNode = document.createElement('div');
-            preloaderNode.id = 'site-preloader';
-            preloaderNode.className = 'site-preloader';
-            preloaderNode.innerHTML = '<div class="preloader-spinner" aria-hidden="true"></div>';
-            document.body.insertBefore(preloaderNode, document.body.firstChild);
+        injectProductionSystemOverlays() {
+            if (!document.getElementById('site-preloader')) {
+                const preloaderNode = document.createElement('div');
+                preloaderNode.id = 'site-preloader';
+                preloaderNode.className = 'site-preloader';
+                preloaderNode.setAttribute('role', 'alert');
+                preloaderNode.setAttribute('aria-busy', 'true');
+                preloaderNode.innerHTML = '<div class="preloader-spinner"></div>';
+                document.body.insertBefore(preloaderNode, document.body.firstChild);
+            }
 
-            // Floating Operations Widget Array
-            const floatingWrapper = document.createElement('div');
-            floatingWrapper.className = 'floating-actions-wrapper';
-            floatingWrapper.innerHTML = `
-                <button class="floating-action-btn float-top" id="btn-back-to-top" aria-label="Scroll back to top asset coordinate">↑</button>
-                <a href="https://wa.me/#" target="_blank" rel="noopener noreferrer" class="floating-action-btn float-wa" aria-label="Open secure WhatsApp communication pipeline">WA</a>
-                <a href="tel:#" class="floating-action-btn float-phone" aria-label="Initiate direct telemetry call voice link">📞</a>
-            `;
-            document.body.appendChild(floatingWrapper);
+            if (!document.querySelector('.floating-actions-wrapper')) {
+                const actionContainerNode = document.createElement('div');
+                actionContainerNode.className = 'floating-actions-wrapper';
+                actionContainerNode.innerHTML = `
+                    <button class="floating-action-btn float-top" id="btn-back-to-top" aria-label="Scroll layout viewport directly back to home coordinate top">↑</button>
+                    <a href="https://wa.me/911452990145" target="_blank" rel="noopener noreferrer" class="floating-action-btn float-wa" aria-label="Open secure WhatsApp data telemetry session channels link">WA</a>
+                    <a href="tel:+911452990145" class="floating-action-btn float-phone" aria-label="Call direct structural operations desk telephone system">📞</a>
+                `;
+                document.body.appendChild(actionContainerNode);
+            }
         },
 
         /**
-         * Resolves pointers directly targeting DOM structure
+         * Resolves pointers directly targeting DOM structure to prevent memory layout thrashing
          */
-        cacheElements() {
-            this.preloader = document.getElementById('site-preloader');
-            this.siteHeader = document.getElementById('site-header');
-            this.navToggle = document.getElementById('mobile-nav-toggle');
-            this.primaryNav = document.getElementById('primary-nav');
-            this.navLinks = document.querySelectorAll('.nav-link, .btn-nav');
-            this.sections = document.querySelectorAll('section, header, footer');
-            this.counterItems = document.querySelectorAll('.stat-item');
-            this.projectCards = document.querySelectorAll('.card-project');
-            this.testimonialsBlock = document.getElementById('testimonials');
-            this.enquiryForm = document.getElementById('project-enquiry-form');
-            this.btnBackToTop = document.getElementById('btn-back-to-top');
-            this.heroSection = document.getElementById('hero');
+        cacheStructuralSelectors() {
+            DomCache.bodyElement = document.body;
+            DomCache.preloaderShield = document.getElementById('site-preloader');
+            DomCache.siteHeader = document.getElementById('site-header');
+            DomCache.navToggle = document.getElementById('mobile-nav-toggle');
+            DomCache.primaryNav = document.getElementById('primary-nav');
+            DomCache.navLinks = document.querySelectorAll('.nav-link, .btn-nav');
+            DomCache.scrollSections = document.querySelectorAll('section, header, footer');
+            DomCache.counterItems = document.querySelectorAll('.stat-item');
+            DomCache.projectCards = document.querySelectorAll('.card-project');
+            DomCache.testimonialsContainer = document.getElementById('testimonials');
+            DomCache.enquiryForm = document.getElementById('project-enquiry-form');
+            DomCache.backToTopButton = document.getElementById('btn-back-to-top');
+            DomCache.heroBanner = document.getElementById('hero');
         },
 
         /**
-         * Handles immediate execution tracking of system component removal timings
+         * Handles immediate execution tracking of preloader layout exit transitions
          */
-        initPreloaderEngine() {
-            window.addEventListener('load', () => {
-                if (this.preloader) {
-                    this.preloader.classList.add('fade-out');
-                    setTimeout(() => this.preloader.remove(), 500);
+        executePreloaderSequence() {
+            const clearPreloaderLayers = () => {
+                if (DomCache.preloaderShield) {
+                    DomCache.preloaderShield.classList.add('fade-out');
+                    DomCache.preloaderShield.setAttribute('aria-busy', 'false');
+                    setTimeout(() => DomCache.preloaderShield.remove(), 450);
                 }
-                this.executeHeroEntranceSequence();
+                this.executeHeroCinematicEntrance();
+            };
+
+            if (document.readyState === 'complete') {
+                clearPreloaderLayers();
+            } else {
+                window.addEventListener('load', clearPreloaderLayers, { once: true });
+            }
+        },
+
+        /**
+         * Fires controlled high performance cinematic layout entries metrics
+         */
+        executeHeroCinematicEntrance() {
+            if (!DomCache.heroBanner) return;
+            const introTitleNode = DomCache.heroBanner.querySelector('.hero-title');
+            const introSubtitleNode = DomCache.heroBanner.querySelector('.hero-subtitle');
+            const introActionsNode = DomCache.heroBanner.querySelector('.hero-actions');
+
+            [introTitleNode, introSubtitleNode, introActionsNode].forEach((nodeElement, loopIdx) => {
+                if (nodeElement) {
+                    nodeElement.style.opacity = '0';
+                    nodeElement.style.transform = 'translateY(15px)';
+                    nodeElement.style.transition = 'opacity 0.75s cubic-bezier(0.25, 1, 0.5, 1), transform 0.75s cubic-bezier(0.25, 1, 0.5, 1)';
+                    
+                    window.requestAnimationFrame(() => {
+                        setTimeout(() => {
+                            nodeElement.style.opacity = '1';
+                            nodeElement.style.transform = 'translateY(0)';
+                        }, 180 * loopIdx);
+                    });
+                }
             });
-            
-            // Fallback safe mechanism for loading cycles
-            setTimeout(() => {
-                if (document.getElementById('site-preloader')) {
-                    this.preloader.classList.add('fade-out');
-                }
-            }, 3000);
-        },
 
-        /**
-         * Fires entrance paths targeting high prominence content structures
-         */
-        executeHeroEntranceSequence() {
-            if (!this.heroSection) return;
-            const title = this.heroSection.querySelector('.hero-title');
-            const subtitle = this.heroSection.querySelector('.hero-subtitle');
-            const actions = this.heroSection.querySelector('.hero-actions');
-
-            [title, subtitle, actions].forEach((node, offsetIdx) => {
-                if (node) {
-                    node.style.opacity = '0';
-                    node.style.transform = 'translateY(20px)';
-                    node.style.transition = 'opacity 1s ease, transform 1s ease';
-                    setTimeout(() => {
-                        node.style.opacity = '1';
-                        node.style.transform = 'translateY(0)';
-                    }, 200 * offsetIdx);
-                }
-            });
-
-            // Lightweight high performance parallax background system deployment
+            // Optimized lightweight passive frame scroll background shift operation
+            let animationFrameRequestToken = null;
             window.addEventListener('scroll', () => {
-                const scrolledDistance = window.pageYOffset;
-                if (scrolledDistance <= window.innerHeight) {
-                    this.heroSection.style.backgroundPositionY = `${scrolledDistance * 0.4}px`;
-                }
+                if (animationFrameRequestToken) return;
+                animationFrameRequestToken = window.requestAnimationFrame(() => {
+                    const scrollDistanceVector = window.pageYOffset;
+                    if (scrollDistanceVector <= window.innerHeight && DomCache.heroBanner) {
+                        DomCache.heroBanner.style.backgroundPositionY = `${scrollDistanceVector * 0.35}px`;
+                    }
+                    animationFrameRequestToken = null;
+                });
             }, { passive: true });
         },
 
         /**
-         * Constructs layout updates supporting complex header adjustments
+         * Binds passive and performance debounced event tracking parameters to the global window
          */
-        initNavigationSystem() {
-            const handleScrollExecution = () => {
-                const scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
+        bindCoreNavigationPipelines() {
+            const executeScrollEvaluations = () => {
+                const currentScrollOffset = window.pageYOffset || document.documentElement.scrollTop;
                 
-                // Sticky Backdrop Threshold Modifier Activation Logic
-                if (scrollOffset > 60) {
-                    this.siteHeader.classList.add('is-sticky');
+                // Sticky Navbar Baseline Trigger Tracking Rule
+                if (currentScrollOffset > 50) {
+                    DomCache.siteHeader.classList.add('is-sticky');
                 } else {
-                    this.siteHeader.classList.remove('is-sticky');
+                    DomCache.siteHeader.classList.remove('is-sticky');
                 }
 
-                // Interactive Back-To-Top Node visibility evaluation
-                if (scrollOffset > 400) {
-                    this.btnBackToTop.classList.add('is-visible');
+                // Top Access Trigger Node visibility processing
+                if (currentScrollOffset > 350) {
+                    DomCache.backToTopButton.classList.add('is-visible');
                 } else {
-                    this.btnBackToTop.classList.remove('is-visible');
+                    DomCache.backToTopButton.classList.remove('is-visible');
                 }
 
-                this.evaluateActiveNavigationState(scrollOffset);
+                this.calculateActiveViewportCoordinates(currentScrollOffset);
             };
 
-            window.addEventListener('scroll', this.debounce(handleScrollExecution, 10), { passive: true });
+            window.addEventListener('scroll', this.optimizeDebounceThrottle(executeScrollEvaluations, 12), { passive: true });
             
-            // Responsive mobile toggle menu click capture adjustments
-            this.navToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const opened = this.navToggle.getAttribute('aria-expanded') === 'true';
-                this.setMobileMenuState(!opened);
+            DomCache.navToggle.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const isExpandedCurrently = DomCache.navToggle.getAttribute('aria-expanded') === 'true';
+                this.updateMobileDrawerVisualState(!isExpandedCurrently);
             });
 
-            this.navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    const selector = link.getAttribute('href');
-                    if (selector.startsWith('#')) {
-                        e.preventDefault();
-                        this.setMobileMenuState(false);
-                        const frameInstance = document.querySelector(selector);
-                        if (frameInstance) {
-                            const destinationOffset = frameInstance.getBoundingClientRect().top + window.pageYOffset - UIConfig.headerHeight;
-                            window.scrollTo({ top: destinationOffset, behavior: 'smooth' });
+            DomCache.navLinks.forEach(anchorNode => {
+                anchorNode.addEventListener('click', (event) => {
+                    const structuralTargetSelector = anchorNode.getAttribute('href');
+                    if (structuralTargetSelector.startsWith('#')) {
+                        event.preventDefault();
+                        this.updateMobileDrawerVisualState(false);
+                        const frameSelectorInstance = document.querySelector(structuralTargetSelector);
+                        if (frameSelectorInstance) {
+                            const absoluteVerticalScrollDestination = frameSelectorInstance.getBoundingClientRect().top + window.pageYOffset - GlobalEngineConfig.headerHeightThreshold;
+                            window.scrollTo({ top: absoluteVerticalScrollDestination, behavior: 'smooth' });
+                            frameSelectorInstance.focus({ preventScroll: true });
                         }
                     }
                 });
             });
 
-            this.btnBackToTop.addEventListener('click', () => {
+            DomCache.backToTopButton.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Screen tracking click dismission layer handling fallback routines
+            document.addEventListener('click', (event) => {
+                if (DomCache.navToggle.getAttribute('aria-expanded') === 'true' && !DomCache.primaryNav.contains(event.target)) {
+                    this.updateMobileDrawerVisualState(false);
+                }
             });
         },
 
         /**
-         * Manages logical accessibility attributes mapping mobile menu displays
+         * Manages mobile menu display logic states mapping accessibility rules safely
          */
-        setMobileMenuState(state) {
-            this.navToggle.setAttribute('aria-expanded', state);
-            this.primaryNav.classList.toggle('is-active', state);
-            document.body.style.overflow = state ? 'hidden' : '';
+        updateMobileDrawerVisualState(targetDisplayState) {
+            DomCache.navToggle.setAttribute('aria-expanded', targetDisplayState);
+            DomCache.primaryNav.classList.toggle('is-active', targetDisplayState);
+            DomCache.bodyElement.style.overflow = targetDisplayState ? 'hidden' : '';
         },
 
         /**
-         * Sets navigation node highlights matching scroll progression metrics
+         * Sets navigation link status mappings matching tracking points inside active sections
          */
-        evaluateActiveNavigationState(scrollOffset) {
-            let activeTargetId = '';
+        calculateActiveViewportCoordinates(currentScrollOffset) {
+            let activeSegmentId = '';
             
-            this.sections.forEach(section => {
-                const topBound = section.offsetTop - (UIConfig.headerHeight + 20);
-                const bottomBound = topBound + section.offsetHeight;
+            DomCache.scrollSections.forEach(section => {
+                const topTrackingBaseline = section.offsetTop - (GlobalEngineConfig.headerHeightThreshold + 30);
+                const bottomTrackingBaseline = topTrackingBaseline + section.offsetHeight;
                 
-                if (scrollOffset >= topBound && scrollOffset < bottomBound) {
-                    const elementId = section.getAttribute('id');
-                    if (elementId) activeTargetId = elementId;
+                if (currentScrollOffset >= topTrackingBaseline && currentScrollOffset < bottomTrackingBaseline) {
+                    const baselineId = section.getAttribute('id');
+                    if (baselineId) activeSegmentId = baselineId;
                 }
             });
 
-            this.navLinks.forEach(link => {
+            DomCache.navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${activeTargetId}`) {
+                if (link.getAttribute('href') === `#${activeSegmentId}`) {
                     link.classList.add('active');
                 }
             });
         },
 
         /**
-         * Leverages high efficiency IntersectionObserver configurations to drive structural tracking
+         * Deploys IntersectionObserver logic parameters targeting global animation sections
          */
-        initScrollRevealFramework() {
-            const layoutRevealObserver = new IntersectionObserver((entries, observer) => {
+        initializeScrollRevealObserver() {
+            const systemicRevealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal-visible');
+                        window.requestAnimationFrame(() => {
+                            entry.target.classList.add('reveal-visible');
+                        });
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: UIConfig.revealOffset });
+            }, { threshold: GlobalEngineConfig.revealBoundaryThreshold });
 
-            // Targets all strategic primary tracking container wrappers from the layout ecosystem
-            const revealTargets = document.querySelectorAll(
+            const structuralRevealSelectors = document.querySelectorAll(
                 '#about .grid, #services .card, #why-choose-us .card, #portfolio .portfolio-block, #process .timeline-item, #testimonials .card, #enquiry .form-layout, footer .container'
             );
 
-            revealTargets.forEach(target => {
-                target.classList.add('reveal-hidden');
-                layoutRevealObserver.observe(target);
+            structuralRevealSelectors.forEach(node => {
+                node.classList.add('reveal-hidden');
+                systemicRevealObserver.observe(node);
             });
         },
 
         /**
-         * Drives high frequency transactional counter increments directly inside views
+         * Drives precision step ticker updates inside visible metric nodes dashboards
          */
-        initAnimatedCounters() {
-            const counterObserver = new IntersectionObserver((entries, observer) => {
+        initializePerformanceCounters() {
+            const metricsTrackerObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const numericNode = entry.target.querySelector('.stat-number');
-                        if (numericNode) {
-                            const aggregateTargetValue = parseInt(numericNode.textContent.replace(/\D/g, ''), 10);
-                            this.animateSingleCounterNode(numericNode, aggregateTargetValue);
+                        const targetNumberContainer = entry.target.querySelector('.stat-number');
+                        if (targetNumberContainer) {
+                            const targetCalculatedMaximumValue = parseInt(targetNumberContainer.textContent.replace(/\D/g, ''), 10);
+                            this.triggerNumericalIncrementalCycles(targetNumberContainer, targetCalculatedMaximumValue);
                         }
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.5 });
+            }, { threshold: 0.4 });
 
-            this.counterItems.forEach(item => counterObserver.observe(item));
+            DomCache.counterItems.forEach(item => metricsTrackerObserver.observe(item));
         },
 
         /**
-         * Smoothly handles step tracking increments inside structural loops
+         * Computes math step calculations inside linear animation sequences efficiently
          */
-        animateSingleCounterNode(node, maxLimit) {
-            let startBaseValue = 0;
-            const operationalDuration = 2000;
-            const targetStepInterval = Math.max(Math.floor(operationalDuration / maxLimit), 15);
-            const cycleStepIncrement = Math.ceil(maxLimit / (operationalDuration / targetStepInterval));
-            
-            const numericalTicker = setInterval(() => {
-                startBaseValue += cycleStepIncrement;
-                if (startBaseValue >= maxLimit) {
-                    node.textContent = `${maxLimit}+`;
-                    clearInterval(numericalTicker);
+        triggerNumericalIncrementalCycles(nodeElement, totalTargetValue) {
+            let conceptualBaseStartingPoint = 0;
+            const operationalStepRefreshRateMs = 16; 
+            const executionProgressStepsCount = Math.ceil(GlobalEngineConfig.maxCounterDurationMs / operationalStepRefreshRateMs);
+            const incrementStepRatioVector = Math.ceil(totalTargetValue / executionProgressStepsCount);
+
+            const proceduralCounterTicker = setInterval(() => {
+                conceptualBaseStartingPoint += incrementStepRatioVector;
+                if (conceptualBaseStartingPoint >= totalTargetValue) {
+                    nodeElement.textContent = `${totalTargetValue}+`;
+                    clearInterval(proceduralCounterTicker);
                 } else {
-                    node.textContent = `${startBaseValue}+`;
+                    nodeElement.textContent = `${conceptualBaseStartingPoint}+`;
                 }
-            }, targetStepInterval);
+            }, operationalStepRefreshRateMs);
         },
 
         /**
-         * Re-configures portfolio markup layers to project real-time data visualizers
+         * Sets up programmatic progress wrappers over active portfolio display grids
          */
-        initProjectCardsEnhancements() {
-            this.projectCards.forEach(card => {
-                const cardBody = card.querySelector('.card-body');
-                const projectTextNode = card.querySelector('.card-text');
+        renderDynamicProjectMetrics() {
+            DomCache.projectCards.forEach(card => {
+                const operationalBodyWrapper = card.querySelector('.card-body');
+                const proceduralTextNode = card.querySelector('.card-text');
+                const trackingTriggerGalleryBtn = card.querySelector('.placeholder-gallery-trigger');
                 
-                if (cardBody && projectTextNode) {
-                    // Simulates programmatic completion index matrices matching portfolio records safely
-                    const completionIndex = card.innerText.includes('Turnkey') || card.innerText.includes('Clinic') || card.innerText.includes('Heritage') ? 100 : 75;
+                if (operationalBodyWrapper && proceduralTextNode) {
+                    // Assigns default progress benchmarks derived securely based on project classifications rules data
+                    let contextualPercentageValue = 0;
+                    const referenceTextString = card.id || '';
                     
-                    const indicatorWrapper = document.createElement('div');
-                    indicatorWrapper.className = 'project-progress-container';
-                    indicatorWrapper.innerHTML = `<div class="project-progress-bar" data-progress="${completionIndex}"></div>`;
-                    
-                    const indexLabelNode = document.createElement('div');
-                    indexLabelNode.className = 'flex justify-between font-xs color-muted mt-xs mb-md';
-                    indexLabelNode.innerHTML = `<span>Completion Index Rate:</span><strong>${completionIndex}%</strong>`;
+                    if (referenceTextString.includes('alpha')) contextualPercentageValue = 85;
+                    else if (referenceTextString.includes('beta')) contextualPercentageValue = 40;
+                    else if (referenceTextString.includes('gamma')) contextualPercentageValue = 15;
+                    else contextualPercentageValue = 100;
 
-                    cardBody.insertBefore(indicatorWrapper, projectTextNode);
-                    cardBody.insertBefore(indexLabelNode, projectTextNode);
+                    const barLayoutContainerNode = document.createElement('div');
+                    barLayoutContainerNode.className = 'project-progress-container';
+                    barLayoutContainerNode.innerHTML = `<div class="project-progress-bar" data-progress-target="${contextualPercentageValue}"></div>`;
+                    
+                    const valuesMetricDisplayLabelNode = document.createElement('div');
+                    valuesMetricDisplayLabelNode.className = 'flex justify-between font-xs color-muted mt-xs mb-md';
+                    valuesMetricDisplayLabelNode.innerHTML = `<span>Construction Tracking Progress:</span><strong>${contextualPercentageValue}%</strong>`;
+
+                    operationalBodyWrapper.insertBefore(barLayoutContainerNode, proceduralTextNode);
+                    operationalBodyWrapper.insertBefore(valuesMetricDisplayLabelNode, proceduralTextNode);
+                }
+
+                if (trackingTriggerGalleryBtn) {
+                    trackingTriggerGalleryBtn.addEventListener('click', () => {
+                        alert('System Notification: Detailed architectural high-definition media engine gallery deployment placeholder triggered.');
+                    });
                 }
             });
 
-            // Binds trigger tracking specifically targeted for structural metric bars expansion processing
-            const structuralProgressObserver = new IntersectionObserver((entries) => {
+            const trackingProgressObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const targetMetricNode = entry.target.querySelector('.project-progress-bar');
-                        if (targetMetricNode) {
-                            const operationalPercentage = targetMetricNode.getAttribute('data-progress');
-                            targetMetricNode.style.width = `${operationalPercentage}%`;
+                        const underlyingMetricIndicatorNode = entry.target.querySelector('.project-progress-bar');
+                        if (underlyingMetricIndicatorNode) {
+                            const layoutTargetWidth = underlyingMetricIndicatorNode.getAttribute('data-progress-target');
+                            window.requestAnimationFrame(() => {
+                                underlyingMetricIndicatorNode.style.width = `${layoutTargetWidth}%`;
+                            });
                         }
                     }
                 });
-            }, { threshold: 0.2 });
+            }, { threshold: 0.15 });
 
-            this.projectCards.forEach(card => structuralProgressObserver.observe(card));
+            DomCache.projectCards.forEach(card => trackingProgressObserver.observe(card));
         },
 
         /**
-         * Operates dynamic carousel mechanics across structured layout targets safely
+         * Operates high performance layout modifications supporting carousel sliders interfaces
          */
-        initTestimonialSlider() {
-            if (!this.testimonialsBlock) return;
+        initializeReferencesCarousel() {
+            if (!DomCache.testimonialsContainer) return;
             
-            const reviewCardsContainer = this.testimonialsBlock.querySelector('.grid');
-            const individualReviewCards = this.testimonialsBlock.querySelectorAll('.testimonial-card');
-            if (individualReviewCards.length === 0) return;
+            const internalSliderTrackGrid = DomCache.testimonialsContainer.querySelector('.grid');
+            const arrayedReviewAssetCards = DomCache.testimonialsContainer.querySelectorAll('.testimonial-card');
+            if (arrayedReviewAssetCards.length === 0) return;
 
-            // Restructure CSS hierarchy styles configuration inline dynamically to optimize cross axis layouts
-            reviewCardsContainer.style.display = 'flex';
-            reviewCardsContainer.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
-            reviewCardsContainer.style.width = `${individualReviewCards.length * 100}%`;
+            internalSliderTrackGrid.style.display = 'flex';
+            internalSliderTrackGrid.style.transition = 'transform 0.55s cubic-bezier(0.25, 1, 0.5, 1)';
+            internalSliderTrackGrid.style.width = `${arrayedReviewAssetCards.length * 100}%`;
             
-            // Build viewport mask context layer wrapper boundaries safely
-            const clippingWrapper = document.createElement('div');
-            clippingWrapper.style.overflow = 'hidden';
-            clippingWrapper.style.width = '100%';
-            reviewCardsContainer.parentNode.insertBefore(clippingWrapper, reviewCardsContainer);
-            clippingWrapper.appendChild(reviewCardsContainer);
+            const layoutClippingWindowNode = document.createElement('div');
+            layoutClippingWindowNode.style.overflow = 'hidden';
+            layoutClippingWindowNode.style.width = '100%';
+            internalSliderTrackGrid.parentNode.insertBefore(layoutClippingWindowNode, internalSliderTrackGrid);
+            layoutClippingWindowNode.appendChild(internalSliderTrackGrid);
 
-            individualReviewCards.forEach(card => {
-                card.style.flex = `0 0 ${100 / individualReviewCards.length}%`;
+            arrayedReviewAssetCards.forEach(card => {
+                card.style.flex = `0 0 ${100 / arrayedReviewAssetCards.length}%`;
                 card.style.width = 'auto';
             });
 
-            // Constructs transactional management controls
-            const sliderControllerNavContainer = document.createElement('div');
-            sliderControllerNavContainer.className = 'flex align-center justify-between mt-xl';
-            sliderControllerNavContainer.style.maxWidth = '200px';
-            sliderControllerNavContainer.style.marginObject = '0 auto';
-            sliderControllerNavContainer.style.marginLeft = 'auto';
-            sliderControllerNavContainer.style.marginRight = 'auto';
-            sliderControllerNavContainer.innerHTML = `
-                <button class="btn btn-secondary btn-sm" id="slider-btn-prev" style="color:var(--primary); border-color:var(--primary); padding:0.5rem 1rem;">←</button>
-                <button class="btn btn-secondary btn-sm" id="slider-btn-next" style="color:var(--primary); border-color:var(--primary); padding:0.5rem 1rem;">→</button>
+            const operationalSliderInterfaceControlsContainer = document.createElement('div');
+            operationalSliderInterfaceControlsContainer.className = 'flex align-center justify-between mt-xl';
+            operationalSliderInterfaceControlsContainer.style.maxWidth = '180px';
+            operationalSliderInterfaceControlsContainer.style.marginLeft = 'auto';
+            operationalSliderInterfaceControlsContainer.style.marginRight = 'auto';
+            operationalSliderInterfaceControlsContainer.innerHTML = `
+                <button class="btn btn-secondary btn-sm" id="carousel-action-prev" style="color:var(--primary); border-color:var(--primary); padding:0.4rem 0.85rem;" aria-label="Move review carousel slide back one step">←</button>
+                <button class="btn btn-secondary btn-sm" id="carousel-action-next" style="color:var(--primary); border-color:var(--primary); padding:0.4rem 0.85rem;" aria-label="Advance review carousel slide forward one step">→</button>
             `;
-            clippingWrapper.parentNode.appendChild(sliderControllerNavContainer);
+            layoutClippingWindowNode.parentNode.appendChild(operationalSliderInterfaceControlsContainer);
 
-            let pointerActiveIndex = 0;
-            let timelineTicker = null;
+            let trackingActiveSliderIndex = 0;
+            let rotationalTimerToken = null;
 
-            const executeViewportShiftSequence = () => {
-                const calculatedXCoordinateShift = (pointerActiveIndex * (100 / individualReviewCards.length));
-                reviewCardsContainer.style.transform = `translateX(-${calculatedXCoordinateShift}%)`;
+            const shiftSliderTrackPosition = () => {
+                const geometricXTranslateAmount = (trackingActiveSliderIndex * (100 / arrayedReviewAssetCards.length));
+                window.requestAnimationFrame(() => {
+                    internalSliderTrackGrid.style.transform = `translateX(-${geometricXTranslateAmount}%)`;
+                });
             };
 
-            const advanceSliderIndex = () => {
-                pointerActiveIndex = (pointerActiveIndex + 1) % individualReviewCards.length;
-                executeViewportShiftSequence();
+            const triggerNextSlideAdvance = () => {
+                trackingActiveSliderIndex = (trackingActiveSliderIndex + 1) % arrayedReviewAssetCards.length;
+                shiftSliderTrackPosition();
             };
 
-            const reverseSliderIndex = () => {
-                pointerActiveIndex = (pointerActiveIndex - 1 + individualReviewCards.length) % individualReviewCards.length;
-                executeViewportShiftSequence();
+            const triggerPrevSlideRegression = () => {
+                trackingActiveSliderIndex = (trackingActiveSliderIndex - 1 + arrayedReviewAssetCards.length) % arrayedReviewAssetCards.length;
+                shiftSliderTrackPosition();
             };
 
-            const launchTimelineLoop = () => {
-                timelineTicker = setInterval(advanceSliderIndex, UIConfig.sliderInterval);
+            const establishRotationIntervalLoop = () => {
+                rotationalTimerToken = setInterval(triggerNextSlideAdvance, GlobalEngineConfig.sliderRotationInterval);
             };
 
-            const terminateTimelineLoop = () => {
-                if (timelineTicker) clearInterval(timelineTicker);
+            const breakRotationIntervalLoop = () => {
+                if (rotationalTimerToken) clearInterval(rotationalTimerToken);
             };
 
-            // Bind systemic controls listener hooks
-            document.getElementById('slider-btn-next').addEventListener('click', () => { terminateTimelineLoop(); advanceSliderIndex(); launchTimelineLoop(); });
-            document.getElementById('slider-btn-prev').addEventListener('click', () => { terminateTimelineLoop(); reverseSliderIndex(); launchTimelineLoop(); });
+            document.getElementById('carousel-action-next').addEventListener('click', () => { breakRotationIntervalLoop(); triggerNextSlideAdvance(); establishRotationIntervalLoop(); });
+            document.getElementById('carousel-action-prev').addEventListener('click', () => { breakRotationIntervalLoop(); triggerPrevSlideRegression(); establishRotationIntervalLoop(); });
 
-            clippingWrapper.addEventListener('mouseenter', terminateTimelineLoop);
-            clippingWrapper.addEventListener('mouseleave', launchTimelineLoop);
+            layoutClippingWindowNode.addEventListener('mouseenter', breakRotationIntervalLoop);
+            layoutClippingWindowNode.addEventListener('mouseleave', establishRotationIntervalLoop);
 
-            launchTimelineLoop();
+            establishRotationIntervalLoop();
         },
 
         /**
-         * Validates dynamic user metrics processing before operational integration stages
+         * Deploys multi-stage tracking verification rules over form structural targets
          */
-        initFormValidationPipeline() {
-            if (!this.enquiryForm) return;
+        registerAcquisitionValidationPipeline() {
+            if (!DomCache.enquiryForm) return;
 
-            const trackingInputs = this.enquiryForm.querySelectorAll('input, select, textarea');
-            const masterSubmitActionNode = this.enquiryForm.querySelector('button[type="submit"]');
+            const structuredInputNodes = DomCache.enquiryForm.querySelectorAll('input, select, textarea');
+            const submitActionExecutionTriggerNode = DomCache.enquiryForm.querySelector('button[type="submit"]');
 
-            // Embed clean runtime logging error spaces directly underneath active fields mapping structures
-            trackingInputs.forEach(input => {
-                const contextContainer = input.parentNode;
-                const errorDisplayElement = document.createElement('span');
-                errorDisplayElement.className = 'field-error-message';
-                errorDisplayElement.id = `${input.id}-error-feedback`;
-                input.setAttribute('aria-describedby', errorDisplayElement.id);
-                contextContainer.appendChild(errorDisplayElement);
+            structuredInputNodes.forEach(inputElement => {
+                const genericContainerWrapper = inputElement.parentNode;
+                const fieldErrorDisplayLabelNode = document.createElement('span');
+                fieldErrorDisplayLabelNode.className = 'field-error-message';
+                fieldErrorDisplayLabelNode.id = `${inputElement.id}-validation-feedback-node`;
+                inputElement.setAttribute('aria-describedby', fieldErrorDisplayLabelNode.id);
+                genericContainerWrapper.appendChild(fieldErrorDisplayLabelNode);
 
-                // Bind modern structural analytical intercept event validation listeners
-                input.addEventListener('input', () => this.evaluateInputValidityContext(input, errorDisplayElement));
-                input.addEventListener('blur', () => this.evaluateInputValidityContext(input, errorDisplayElement));
+                const executeFieldAudits = () => this.analyzeTargetInputValidityStatus(inputElement, fieldErrorDisplayLabelNode);
+                
+                inputElement.addEventListener('input', this.optimizeDebounceThrottle(executeFieldAudits, 200));
+                inputElement.addEventListener('blur', executeFieldAudits);
             });
 
-            this.enquiryForm.addEventListener('input', this.debounce(() => {
-                const operationalValidityState = this.enquiryForm.checkValidity();
-                masterSubmitActionNode.disabled = !operationalValidityState;
-            }, 150));
+            DomCache.enquiryForm.addEventListener('input', this.optimizeDebounceThrottle(() => {
+                const operationalValidityValue = DomCache.enquiryForm.checkValidity();
+                submitActionExecutionTriggerNode.disabled = !operationalValidityStateVerification();
+            }, 100));
 
-            this.enquiryForm.addEventListener('submit', (e) => this.executeFormTransmissionSequence(e, masterSubmitActionNode));
+            const operationalValidityStateVerification = () => {
+                let currentFormValidityFlag = DomCache.enquiryForm.checkValidity();
+                const telemetryValueString = document.getElementById('client-phone').value.replace(/\D/g, '');
+                if (telemetryValueString.length > 0 && telemetryValueString.length < 10) {
+                    currentFormValidityFlag = false;
+                }
+                return currentFormValidityFlag;
+            };
+
+            DomCache.enquiryForm.addEventListener('submit', (event) => {
+                this.executeSecureFormTransmissionPipeline(event, submitActionExecutionTriggerNode);
+            });
             
-            // Initialization state lockdown execution routine
-            masterSubmitActionNode.disabled = true;
+            submitActionExecutionTriggerNode.disabled = true;
         },
 
         /**
-         * Executes functional verification tests targeting user parameters profiles
+         * Audits active fields strings against compliance directives rules
          */
-        evaluateInputValidityContext(input, errorNode) {
-            let errorStatusText = '';
-            input.style.borderColor = '';
+        analyzeTargetInputValidityStatus(inputNode, targetErrorFeedbackNode) {
+            let compiledErrorString = '';
+            inputNode.style.borderColor = '';
 
-            if (!input.validity.valid) {
-                if (input.validity.valueMissing) {
-                    errorStatusText = 'This programmatic parameter criterion is required.';
-                } else if (input.validity.typeMismatch && input.type === 'email') {
-                    errorStatusText = 'Please enter a structurally valid network email address protocol format.';
+            if (!inputNode.validity.valid) {
+                if (inputNode.validity.valueMissing) {
+                    compiledErrorString = 'This operational data parameters node field is strictly required.';
+                } else if (inputNode.validity.typeMismatch && inputNode.type === 'email') {
+                    compiledErrorString = 'Please enter a structurally conforming network email transmission protocol address.';
                 }
             }
 
-            // Custom phone matrix regex verification check pattern routing
-            if (input.type === 'tel' && input.value.trim() !== '') {
-                const cleanPhoneValue = input.value.replace(/\D/g, '');
-                if (cleanPhoneValue.length < 10) {
-                    errorStatusText = 'Telemetry parameter sequence requires a verified 10-digit baseline configuration minimum.';
+            if (inputNode.type === 'tel' && inputNode.value.trim() !== '') {
+                const condensedCleanNumericalString = inputNode.value.replace(/\D/g, '');
+                if (condensedCleanNumericalString.length < 10) {
+                    compiledErrorString = 'Telemetry sequence specifications mandate a valid 10-digit baseline minimum config.';
                 }
             }
 
-            if (errorStatusText) {
-                errorNode.textContent = errorStatusText;
-                input.style.borderColor = '#ef4444';
+            if (compiledErrorString) {
+                targetErrorFeedbackNode.textContent = compiledErrorString;
+                inputNode.style.borderColor = 'var(--error)';
             } else {
-                errorNode.textContent = '';
+                targetErrorFeedbackNode.textContent = '';
             }
         },
 
         /**
-         * Safely manages form transmissions and prepares hooks for external endpoints like Web3Forms
+         * Intercepts transmission events and processes secure data integration wrappers
          */
-        executeFormTransmissionSequence(event, actionNode) {
+        executeSecureFormTransmissionPipeline(event, actionSubmitButtonNode) {
             event.preventDefault();
             
-            // Injects responsive state visual elements onto target execution layouts
-            actionNode.disabled = true;
-            const fallbackOriginalText = actionNode.innerHTML;
-            actionNode.classList.add('ripple-surface');
-            actionNode.innerHTML = `<span class="btn-spinner" aria-hidden="true"></span><span class="btn-loading-text">${fallbackOriginalText}</span>`;
+            // Anti-Spam Security Layer Check Honeypot Guard Mechanism
+            const validationHoneypotValueString = document.getElementById('system-verification-token').value;
+            if (validationHoneypotValueString.trim() !== '') {
+                console.warn('Anti-Spam security honeypot intercept caught automated submission baseline. Script termination deployed.');
+                return;
+            }
 
-            const operationalFormData = new FormData(this.enquiryForm);
-            const conversionObjectPayload = {};
-            operationalFormData.forEach((val, key) => conversionObjectPayload[key] = val);
+            actionSubmitButtonNode.disabled = true;
+            const absoluteSavedTextContentString = actionSubmitButtonNode.textContent;
+            actionSubmitButtonNode.innerHTML = `<span class="btn-spinner" aria-hidden="true"></span><span class="btn-loading-text is-hidden">${absoluteSavedTextContentString}</span>`;
 
-            console.log('--- Shree Om Form Transaction Data Log ---');
-            console.log('Data parameters verified. Transmitting payload to targeted network layer:', conversionObjectPayload);
-
-            // SIMULATED TRANSACTION NETWORK ROUTING TIMELINES LAYER HOOK
-            // NOTE: Future development stages can seamlessly bridge Web3Forms integration endpoints here:
-            // fetch('https://api.web3forms.com/submit', { method: 'POST', body: operationalFormData })
+            const underlyingFormPayloadSourceData = new FormData(DomCache.enquiryForm);
+            
+            // WEB3FORMS / FORMSUBMIT TRANSACTION CONFIGURATION INTERCEPT FRAMEWORK HOOKS PLACEHOLDERS
+            // To run external configurations cleanly at later deployment stages, utilize data payload mappings:
+            // fetch('https://api.web3forms.com/submit' OR 'https://formsubmit.co/ajax/your-email', { method: 'POST', body: underlyingFormPayloadSourceData })
+            
+            console.log('--- Secure Form Structural Output Dispatched ---');
             
             setTimeout(() => {
-                alert('Success: Project evaluation parameters transmitted safely. Our structural engineering group will contact you within 24 working hours.');
-                actionNode.innerHTML = fallbackOriginalText;
-                actionNode.disabled = false;
-                this.enquiryForm.reset();
-                masterSubmitActionNode.disabled = true;
-            }, 2000);
+                // Success animation layer indicator mock simulation alert framework routing
+                alert('Success: Project configuration context criteria transmitted safely. Structural estimations calculations dispatched.');
+                
+                actionSubmitButtonNode.innerHTML = absoluteSavedTextContentString;
+                DomCache.enquiryForm.reset();
+                actionSubmitButtonNode.disabled = true;
+            }, 1600);
         },
 
         /**
-         * Configures modern ripple elements over targeted focus bounds elements interaction nodes
+         * Attaches active visual ripple layout tracking transformations over elements bounds clicks
          */
-        initInteractiveRipples() {
-            const interactiveTriggers = document.querySelectorAll('.btn, .social-icon-link, .floating-action-btn');
+        deployInteractiveRipples() {
+            const contextualClickableTargets = document.querySelectorAll('.btn, .social-icon-link, .floating-action-btn');
             
-            interactiveTriggers.forEach(trigger => {
-                trigger.classList.add('ripple-surface');
-                trigger.addEventListener('click', function(e) {
-                    const trackingBoundBox = this.getBoundingClientRect();
-                    const calculatedXOffset = e.clientX - trackingBoundBox.left;
-                    const calculatedYOffset = e.clientY - trackingBoundBox.top;
+            contextualClickableTargets.forEach(targetElementNode => {
+                targetElementNode.classList.add('ripple-surface');
+                targetElementNode.addEventListener('click', function(event) {
+                    const trackingBoundingBoxGeometry = this.getBoundingClientRect();
+                    const absoluteCalculatedXCoordinate = event.clientX - trackingBoundingBoxGeometry.left;
+                    const absoluteCalculatedYCoordinate = event.clientY - trackingBoundingBoxGeometry.top;
 
-                    const localizedRippleNode = document.createElement('span');
-                    localizedRippleNode.className = 'btn-ripple';
-                    localizedRippleNode.style.left = `${calculatedXOffset}px`;
-                    localizedRippleNode.style.top = `${calculatedYOffset}px`;
+                    const underlyingRippleSpanNode = document.createElement('span');
+                    underlyingRippleSpanNode.className = 'btn-ripple';
+                    underlyingRippleSpanNode.style.left = `${absoluteCalculatedXCoordinate}px`;
+                    underlyingRippleSpanNode.style.top = `${absoluteCalculatedYCoordinate}px`;
                     
-                    const dynamicDiameterCompensator = Math.max(trackingBoundBox.width, trackingBoundBox.height);
-                    localizedRippleNode.style.width = `${dynamicDiameterCompensator}px`;
-                    localizedRippleNode.style.height = `${dynamicDiameterCompensator}px`;
+                    const calculatedMaxVectorDiameterValue = Math.max(trackingBoundingBoxGeometry.width, trackingBoundingBoxGeometry.height);
+                    underlyingRippleSpanNode.style.width = `${calculatedMaxVectorDiameterValue}px`;
+                    underlyingRippleSpanNode.style.height = `${calculatedMaxVectorDiameterValue}px`;
 
-                    this.appendChild(localizedRippleNode);
-                    setTimeout(() => localizedRippleNode.remove(), 600);
+                    this.appendChild(underlyingRippleSpanNode);
+                    setTimeout(() => underlyingRippleSpanNode.remove(), 550);
                 });
             });
         },
 
         /**
-         * Standard performance debouncer function to prevent scroll-heavy rendering overhead
+         * Performance stabilizer utility that mitigates high frequency layout calculation overheads
          */
-        debounce(callbackFn, delayTime) {
-            let activityTimerReference;
-            return function(...argMatrix) {
-                const executionContext = this;
-                clearTimeout(activityTimerReference);
-                activityTimerReference = setTimeout(() => callbackFn.apply(executionContext, argMatrix), delayTime);
+        optimizeDebounceThrottle(callbackExecutionFunction, delayTimingWindowMs) {
+            let activeTimerTokenReference = null;
+            return function(...argumentPayloadsArray) {
+                const executionContextScope = this;
+                clearTimeout(activeTimerTokenReference);
+                activeTimerTokenReference = setTimeout(() => {
+                    callbackExecutionFunction.apply(executionContextScope, argumentPayloadsArray);
+                }, delayTimingWindowMs);
             };
         }
     };
 
     // Initialize application systems logic
-    AppController.init();
-});
+    AppMasterController.init();
+})();
