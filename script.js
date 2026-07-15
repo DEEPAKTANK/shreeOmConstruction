@@ -30,7 +30,7 @@
             this.compileProjectProgressGauges();
             this.buildReferencesCarouselTrack();
             this.verifyFormInterceptorsCompliance();
-            this.initializeTactileRipples();
+            this.initializeInteractiveRipples();
         },
 
         /**
@@ -504,36 +504,55 @@
         /**
          * Manages network transmission processes safely and provides hooks for direct API connections
          */
-        executeSecureEnquiryFormSubmissionSequence(event, targetFormActionButtonNode) {
-            event.preventDefault();
-            
-            // Advanced Security Layer Checker - Anti-Spam Honeypot Guard Logic
-            const securityHoneypotValueString = document.getElementById('system-security-token-id').value;
-            if (securityHoneypotValueString.trim() !== '') {
-                console.error('Security Monitor: Automated anti-spam execution framework triggered interception sequence. Pipeline terminated.');
-                return;
+        async executeSecureEnquiryFormSubmissionSequence(event, button) {
+
+    event.preventDefault();
+
+    button.disabled = true;
+
+    const originalText = button.innerHTML;
+
+    button.innerHTML = "Sending...";
+
+    const formData = new FormData(SystemsElementCache.acquisitionEnquiryForm);
+
+    try {
+
+        const response = await fetch(
+            "https://api.web3forms.com/submit",
+            {
+                method: "POST",
+                body: formData
             }
+        );
 
-            targetFormActionButtonNode.disabled = true;
-            const originalSavedButtonTextValue = targetFormActionButtonNode.textContent;
-            targetFormActionButtonNode.innerHTML = `<span class="btn-spinner" aria-hidden="true"></span><span class="btn-loading-text is-hidden">${originalSavedButtonTextValue}</span>`;
+        const result = await response.json();
 
-            const operationalFormDataPayload = new FormData(SystemsElementCache.acquisitionEnquiryForm);
-            
-            // WEB3FORMS / FORMSUBMIT / GOOGLE SHEETS API SECURE TRANSACTIONS ROUTING CODES
-            // To process external networking dynamically at later stages, connect endpoints directly here:
-            // fetch('https://api.web3forms.com/submit', { method: 'POST', body: operationalFormDataPayload })
-            
-            console.log('--- Secure System Capital Parameters Transmission Hub Dispatched ---');
+        if (result.success) {
 
-            setTimeout(() => {
-                alert('Success Validation Statement: Corporate engineering briefs dispatched safely. Structural estimates calculations scheduled.');
-                
-                targetFormActionButtonNode.innerHTML = originalSavedButtonTextValue;
-                SystemsElementCache.acquisitionEnquiryForm.reset();
-                targetFormActionButtonNode.disabled = true;
-            }, 1800);
-        },
+            alert("Thank you! Your enquiry has been submitted.");
+
+            SystemsElementCache.acquisitionEnquiryForm.reset();
+
+        } else {
+
+            alert(result.message || "Submission failed.");
+
+        }
+
+    } catch (error) {
+
+        alert("Network error. Please try again.");
+
+    } finally {
+
+        button.disabled = false;
+
+        button.innerHTML = originalText;
+
+    }
+
+}
 
         /**
          * Deploys GPU-accelerated tactical ripple transformations over elements interaction bounds click sequences
