@@ -451,8 +451,16 @@
                     <p class="section-lead">Submit target asset metrics parameters to trigger structured pricing estimations pathways analysis models.</p>
                 </header>
 
-                <form action="" method="POST" class="card card-body form-layout" id="project-enquiry-form" novalidate>
+                <form action="https://api.web3forms.com/submit" method="POST" class="card card-body form-layout" id="project-enquiry-form" novalidate>
+                    <input type="hidden" name="access_key" value="8f109d40-63fa-4109-af2d-fbabfdaa872f">
+
+                    <input type="hidden" name="subject" value="New Construction Enquiry">
+
+                    <input type="hidden" name="from_name" value="Shree Om Construction & Planning">
+                    <input type="hidden" name="replyto" value="email">
+                    <input type="checkbox" name="botcheck" style="display:none">
                     
+                    <input type="hidden"  name="redirect" value="https://YOUR_GITHUB_USERNAME.github.io/shree-om-construction/thankyou.html">
                     <!-- Advanced Anti-Spam Security Bot Honeypot Input -->
                     <div class="security-honeypot-layer" aria-hidden="true">
                         <label for="system-security-token-id">Do not interact with this structural form layout control element</label>
